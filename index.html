@@ -5,8 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+    <div class="block"></div>
+
+    <script>
+        // Function to generate random color
+        function getRandomColor() {
+            var letters = '0123456789ABCDEF';
+            var color = '#';
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        // Create blocks dynamically
+        var block = document.querySelector('.block');
+        for (var i = 0; i < 50; i++) {
+            var newBlock = document.createElement('div');
+            newBlock.className = 'block';
+            newBlock.style.backgroundColor = getRandomColor();
+            newBlock.style.top = (Math.floor(i / 10) * 60 + 50) + 'px'; // Adjust top position based on row
+            newBlock.style.left = ((i % 10) * 10 + 2) + '%'; // Adjust left position based on column
+            document.body.appendChild(newBlock);
+        }
+    </script>
+
+
+    <div class="ball">
+        <img src="images/black-circle.png" alt="bullet">
+    </div>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
