@@ -10,7 +10,7 @@ In Color Blast, the objective is simple: destroy all the blocks as quickly as po
 
 Here's a preview of the game:
 
-[![Color Blast Preview](preview_image.jpg)](https://your-game-url.com)
+![Color Blast Preview](images/colorblastprev.png)
 
 ## Getting Started
 
